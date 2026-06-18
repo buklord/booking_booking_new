@@ -24,7 +24,9 @@ slotsRouter.get("/", async (req, res, next) => {
 const reportSchema = z.object({
   user_id: z.string().uuid(),
   test_centre_id: z.string().uuid(),
-  slots: z.array(z.string().datetime()).min(1),
+  // DVSA slot times are local (no timezone), so accept both offset and local
+  // ISO 8601 datetimes.
+  slots: z.array(z.string().datetime({ offset: true, local: true })).min(1),
 });
 
 /**
