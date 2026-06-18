@@ -1,0 +1,26 @@
+{
+  "expo": {
+    "name": "Driving Date Search",
+    "slug": "driving-date-search",
+    "version": "0.1.0",
+    "orientation": "portrait",
+    "userInterfaceStyle": "light",
+    "splash": {
+      "resizeMode": "contain",
+      "backgroundColor": "#0b5fff"
+    },
+    "assetBundlePatterns": ["**/*"],
+    "ios": {
+      "supportsTablet": true,
+      "bundleIdentifier": "uk.co.drivingdatesearch.app"
+    },
+    "android": {
+      "package": "uk.co.drivingdatesearch.app",
+      "googleServicesFile": "./google-services.json"
+    },
+    "plugins": ["expo-notifications"],
+    "extra": {
+      "apiUrl": "http://localhost:4000"
+    }
+  }
+}
